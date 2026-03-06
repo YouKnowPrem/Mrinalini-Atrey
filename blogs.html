@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Blogs</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Read my latest insights, articles, and thoughts on international research, academic frameworks, and global policy.">
+    <meta name="keywords" content="academic blog, international research, global policy, academia, research insights">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .blog-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .blog-item {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        @media (min-width: 768px) {
+            .blog-item {
+                grid-template-columns: 300px 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Background Animated Gradient Orbs -->
+    <div class="bg-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Scholar.</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blogs.html" class="active">Blogs</a></li>
+                <li><a href="academics.html">Academics</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="section" style="margin-top: var(--nav-height); padding-bottom: 2rem;">
+        <div class="container text-center" style="text-align: center;">
+            <span class="glass-pill reveal" style="margin-bottom: 1rem;">Insights & Articles</span>
+            <h1 class="reveal" style="transition-delay: 0.1s;">Academic <span
+                    style="background: linear-gradient(135deg, var(--accent-pink), var(--accent-lavender)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Blogs</span>
+            </h1>
+            <p class="reveal" style="transition-delay: 0.2s; max-width: 600px; margin: 1rem auto 0;">Explore my
+                collection of thoughts, analyses, and reflections on international academic trends and my experiences
+                across various global positions.</p>
+        </div>
+    </header>
+
+    <!-- Blog Archive -->
+    <main class="section" style="padding-top: 2rem;">
+        <div class="container">
+            <div class="blog-list">
+
+                <!-- SEO Blog Post 1 -->
+                <article class="glass-card blog-item reveal">
+                    <div
+                        style="background: rgba(255,255,255,0.4); border-radius: 12px; height: 200px; display: flex; align-items: center; justify-content: center;">
+                        <i class="fa-solid fa-earth-americas"
+                            style="font-size: 4rem; color: var(--accent-lavender); opacity: 0.7;"></i>
+                    </div>
+                    <div>
+                        <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 1rem;">
+                            <span class="glass-pill" style="font-size: 0.75rem;">International Relations</span>
+                            <span style="font-size: 0.85rem; color: var(--text-light);">March 15, 2026</span>
+                        </div>
+                        <h2 style="font-size: 1.8rem; margin-bottom: 1rem;">The Future of Cross-Border Academic
+                            Collaborations</h2>
+                        <p style="margin-bottom: 1.5rem;">As global networks become more interconnected, the strategies
+                            for successful cross-border academic research must evolve. This article explores the nuances
+                            of international partnerships, from navigating different institutional policies to building
+                            trust across cultural divides.</p>
+                        <a href="#" class="btn btn-primary" style="padding: 0.7rem 1.5rem; font-size: 1rem;">Read Full
+                            Article</a>
+                    </div>
+                </article>
+
+                <!-- SEO Blog Post 2 -->
+                <article class="glass-card blog-item reveal" style="transition-delay: 0.1s;">
+                    <div
+                        style="background: rgba(255,255,255,0.4); border-radius: 12px; height: 200px; display: flex; align-items: center; justify-content: center;">
+                        <i class="fa-solid fa-landmark"
+                            style="font-size: 4rem; color: var(--accent-pink); opacity: 0.7;"></i>
+                    </div>
+                    <div>
+                        <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 1rem;">
+                            <span class="glass-pill" style="font-size: 0.75rem;">Policy & Heritage</span>
+                            <span style="font-size: 0.85rem; color: var(--text-light);">Feb 28, 2026</span>
+                        </div>
+                        <h2 style="font-size: 1.8rem; margin-bottom: 1rem;">Navigating Policy Frameworks in Global
+                            Organizations</h2>
+                        <p style="margin-bottom: 1.5rem;">Working with international entities like ICOMOS requires a
+                            deep understanding of multi-layered policy frameworks. In this piece, I share insights on
+                            how researchers can effectively contribute to global policy making while maintaining
+                            rigorous academic standards.</p>
+                        <a href="#" class="btn btn-primary" style="padding: 0.7rem 1.5rem; font-size: 1rem;">Read Full
+                            Article</a>
+                    </div>
+                </article>
+
+                <!-- SEO Blog Post 3 -->
+                <article class="glass-card blog-item reveal" style="transition-delay: 0.1s;">
+                    <div
+                        style="background: rgba(255,255,255,0.4); border-radius: 12px; height: 200px; display: flex; align-items: center; justify-content: center;">
+                        <i class="fa-solid fa-microscope"
+                            style="font-size: 4rem; color: var(--accent-lavender); opacity: 0.7;"></i>
+                    </div>
+                    <div>
+                        <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 1rem;">
+                            <span class="glass-pill" style="font-size: 0.75rem;">Research Methodology</span>
+                            <span style="font-size: 0.85rem; color: var(--text-light);">Jan 12, 2026</span>
+                        </div>
+                        <h2 style="font-size: 1.8rem; margin-bottom: 1rem;">Standardizing Qualitative Metrics Across
+                            Cultures</h2>
+                        <p style="margin-bottom: 1.5rem;">One of the biggest challenges in international research is
+                            standardizing qualitative data. This blog breaks down modern methodologies for ensuring data
+                            integrity when conducting research across differing cultural landscapes.</p>
+                        <a href="#" class="btn btn-primary" style="padding: 0.7rem 1.5rem; font-size: 1rem;">Read Full
+                            Article</a>
+                    </div>
+                </article>
+
+                <!-- SEO Blog Post 4 -->
+                <article class="glass-card blog-item reveal" style="transition-delay: 0.1s;">
+                    <div
+                        style="background: rgba(255,255,255,0.4); border-radius: 12px; height: 200px; display: flex; align-items: center; justify-content: center;">
+                        <i class="fa-solid fa-book-journal-whills"
+                            style="font-size: 4rem; color: var(--accent-pink); opacity: 0.7;"></i>
+                    </div>
+                    <div>
+                        <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 1rem;">
+                            <span class="glass-pill" style="font-size: 0.75rem;">Academic Publishing</span>
+                            <span style="font-size: 0.85rem; color: var(--text-light);">Nov 05, 2025</span>
+                        </div>
+                        <h2 style="font-size: 1.8rem; margin-bottom: 1rem;">The Impact of Open Access on Global Research
+                            Value</h2>
+                        <p style="margin-bottom: 1.5rem;">Open access publishing has transformed how research is
+                            consumed globally. Here, I analyze the correlation between open access journals and the
+                            rapid dissemination of academic knowledge in developing nations.</p>
+                        <a href="#" class="btn btn-primary" style="padding: 0.7rem 1.5rem; font-size: 1rem;">Read Full
+                            Article</a>
+                    </div>
+                </article>
+
+                <!-- SEO Blog Post 5 -->
+                <article class="glass-card blog-item reveal" style="transition-delay: 0.1s;">
+                    <div
+                        style="background: rgba(255,255,255,0.4); border-radius: 12px; height: 200px; display: flex; align-items: center; justify-content: center;">
+                        <i class="fa-solid fa-graduation-cap"
+                            style="font-size: 4rem; color: var(--accent-lavender); opacity: 0.7;"></i>
+                    </div>
+                    <div>
+                        <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 1rem;">
+                            <span class="glass-pill" style="font-size: 0.75rem;">Career & Leadership</span>
+                            <span style="font-size: 0.85rem; color: var(--text-light);">Sep 22, 2025</span>
+                        </div>
+                        <h2 style="font-size: 1.8rem; margin-bottom: 1rem;">Building an International Academic Career
+                            Path</h2>
+                        <p style="margin-bottom: 1.5rem;">For emerging scholars looking to establish an international
+                            footprint, strategic positioning is key. This article details actionable steps for acquiring
+                            global fellowships, positions, and building a resilient scholarly network.</p>
+                        <a href="#" class="btn btn-primary" style="padding: 0.7rem 1.5rem; font-size: 1rem;">Read Full
+                            Article</a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content reveal">
+                <div class="footer-col" style="flex: 2; min-width: 250px;">
+                    <h3 class="logo" style="margin-bottom: 1rem;">Scholar.</h3>
+                    <p style="max-width: 300px;">A premium academic portfolio showcasing international research and
+                        experiences.</p>
+                </div>
+                <div class="footer-col" style="flex: 1; min-width: 150px;">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="blogs.html">Blogs</a></li>
+                        <li><a href="academics.html">Academics</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col" style="flex: 1; min-width: 150px;">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="#">Google Scholar</a></li>
+                        <li><a href="#">ICOMOS</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">ORCID</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Academic Portfolio. All rights reserved. | Built with elegance.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

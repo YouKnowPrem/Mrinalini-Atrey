@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Academics & Research</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="View my complete academic archive, including peer-reviewed papers, journals, and international study links.">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .archive-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 1rem;
+        }
+
+        .archive-table th {
+            text-align: left;
+            padding: 1rem;
+            color: var(--text-light);
+            font-weight: 500;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .archive-table td {
+            background: rgba(255, 255, 255, 0.3);
+            padding: 1.5rem 1rem;
+            backdrop-filter: blur(8px);
+        }
+
+        .archive-table tr td:first-child {
+            border-top-left-radius: 12px;
+            border-bottom-left-radius: 12px;
+        }
+
+        .archive-table tr td:last-child {
+            border-top-right-radius: 12px;
+            border-bottom-right-radius: 12px;
+        }
+
+        .archive-table tr {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .archive-table tr:hover td {
+            background: rgba(255, 255, 255, 0.6);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        @media (max-width: 768px) {
+            .archive-table thead {
+                display: none;
+            }
+
+            .archive-table,
+            .archive-table tbody,
+            .archive-table tr,
+            .archive-table td {
+                display: block;
+                width: 100%;
+            }
+
+            .archive-table tr {
+                margin-bottom: 2rem;
+                border-radius: 12px;
+                overflow: hidden;
+                border: 1px solid var(--glass-border);
+            }
+
+            .archive-table td {
+                text-align: right;
+                padding-left: 40%;
+                position: relative;
+            }
+
+            .archive-table td::before {
+                content: attr(data-label);
+                position: absolute;
+                left: 1rem;
+                width: 35%;
+                font-weight: 600;
+                text-align: left;
+                color: var(--text-light);
+            }
+        }
+
+        .profile-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .profile-link {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            background: var(--glass-bg);
+            padding: 1rem 1.5rem;
+            border-radius: 50px;
+            border: 1px solid var(--glass-border);
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .profile-link:hover {
+            background: rgba(255, 255, 255, 0.8);
+            transform: translateY(-3px);
+            box-shadow: var(--glass-shadow-hover);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Background Animated Gradient Orbs -->
+    <div class="bg-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Scholar.</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="academics.html" class="active">Academics</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="section" style="margin-top: var(--nav-height); padding-bottom: 2rem;">
+        <div class="container text-center" style="text-align: center;">
+            <span class="glass-pill reveal" style="margin-bottom: 1rem;">Research Library</span>
+            <h1 class="reveal" style="transition-delay: 0.1s;">Academic <span
+                    style="background: linear-gradient(135deg, var(--accent-pink), var(--accent-lavender)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Profiles
+                    & Archive</span></h1>
+            <p class="reveal" style="transition-delay: 0.2s; max-width: 600px; margin: 1rem auto 0;">A comprehensive
+                repository of my published works, research papers, and institutional links. Excellent for providing
+                citations and accessing my full bibliography.</p>
+
+            <div class="profile-links reveal" style="transition-delay: 0.3s;">
+                <a href="#" class="profile-link">
+                    <i class="fa-brands fa-google" style="color: #ea4335;"></i> Google Scholar
+                </a>
+                <a href="#" class="profile-link">
+                    <i class="fa-brands fa-orcid" style="color: #a6ce39;"></i> ORCID
+                </a>
+                <a href="#" class="profile-link">
+                    <i class="fa-solid fa-building-columns" style="color: var(--accent-lavender);"></i> ICOMOS Profile
+                </a>
+                <a href="#" class="profile-link">
+                    <i class="fa-brands fa-researchgate" style="color: #00ccbb;"></i> ResearchGate
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Archive -->
+    <main class="section" style="padding-top: 2rem;">
+        <div class="container">
+            <div class="glass-card reveal">
+                <h2
+                    style="margin-bottom: 2rem; font-size: 1.8rem; border-bottom: 1px solid var(--glass-border); padding-bottom: 1rem;">
+                    Published Works</h2>
+
+                <table class="archive-table">
+                    <thead>
+                        <tr>
+                            <th>Year</th>
+                            <th>Title & Publication</th>
+                            <th>Type</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Paper 1 -->
+                        <tr>
+                            <td data-label="Year" style="font-weight: 500; color: var(--text-light);">2026</td>
+                            <td data-label="Title & Publication">
+                                <strong
+                                    style="font-size: 1.1rem; display: block; margin-bottom: 0.5rem; color: var(--text-dark);">Global
+                                    Perspectives on Modern Academic Frameworks</strong>
+                                <span style="font-size: 0.9rem; color: var(--text-light);">International Journal of
+                                    Standardized Research</span>
+                            </td>
+                            <td data-label="Type"><span class="glass-pill"
+                                    style="font-size: 0.75rem; background: rgba(233, 213, 255, 0.5);">Peer
+                                    Reviewed</span></td>
+                            <td data-label="Action">
+                                <a href="#" class="btn btn-glass" style="padding: 0.5rem 1rem; font-size: 0.9rem;">View
+                                    / Cite <i class="fa-solid fa-external-link-alt"
+                                        style="margin-left: 5px; font-size: 0.8rem;"></i></a>
+                            </td>
+                        </tr>
+                        <!-- Paper 2 -->
+                        <tr>
+                            <td data-label="Year" style="font-weight: 500; color: var(--text-light);">2025</td>
+                            <td data-label="Title & Publication">
+                                <strong
+                                    style="font-size: 1.1rem; display: block; margin-bottom: 0.5rem; color: var(--text-dark);">Developing
+                                    Cross-Cultural Strategies</strong>
+                                <span style="font-size: 0.9rem; color: var(--text-light);">Global Policy Review</span>
+                            </td>
+                            <td data-label="Type"><span class="glass-pill"
+                                    style="font-size: 0.75rem; background: rgba(251, 207, 232, 0.5);">Journal</span>
+                            </td>
+                            <td data-label="Action">
+                                <a href="#" class="btn btn-glass" style="padding: 0.5rem 1rem; font-size: 0.9rem;">View
+                                    / Cite <i class="fa-solid fa-external-link-alt"
+                                        style="margin-left: 5px; font-size: 0.8rem;"></i></a>
+                            </td>
+                        </tr>
+                        <!-- Paper 3 -->
+                        <tr>
+                            <td data-label="Year" style="font-weight: 500; color: var(--text-light);">2024</td>
+                            <td data-label="Title & Publication">
+                                <strong
+                                    style="font-size: 1.1rem; display: block; margin-bottom: 0.5rem; color: var(--text-dark);">The
+                                    Intersections of Local Heritage and Global Directives</strong>
+                                <span style="font-size: 0.9rem; color: var(--text-light);">ICOMOS Annual Symposium
+                                    Proceedings</span>
+                            </td>
+                            <td data-label="Type"><span class="glass-pill"
+                                    style="font-size: 0.75rem; background: rgba(224, 242, 254, 0.5);">Conference</span>
+                            </td>
+                            <td data-label="Action">
+                                <a href="#" class="btn btn-glass" style="padding: 0.5rem 1rem; font-size: 0.9rem;">View
+                                    / Cite <i class="fa-solid fa-external-link-alt"
+                                        style="margin-left: 5px; font-size: 0.8rem;"></i></a>
+                            </td>
+                        </tr>
+                        <!-- Paper 4 -->
+                        <tr>
+                            <td data-label="Year" style="font-weight: 500; color: var(--text-light);">2023</td>
+                            <td data-label="Title & Publication">
+                                <strong
+                                    style="font-size: 1.1rem; display: block; margin-bottom: 0.5rem; color: var(--text-dark);">Metamodern
+                                    Approaches to Policy Analysis</strong>
+                                <span style="font-size: 0.9rem; color: var(--text-light);">Quarterly Review of Academic
+                                    Methods</span>
+                            </td>
+                            <td data-label="Type"><span class="glass-pill"
+                                    style="font-size: 0.75rem; background: rgba(233, 213, 255, 0.5);">Peer
+                                    Reviewed</span></td>
+                            <td data-label="Action">
+                                <a href="#" class="btn btn-glass" style="padding: 0.5rem 1rem; font-size: 0.9rem;">View
+                                    / Cite <i class="fa-solid fa-external-link-alt"
+                                        style="margin-left: 5px; font-size: 0.8rem;"></i></a>
+                            </td>
+                        </tr>
+                        <!-- Paper 5 -->
+                        <tr>
+                            <td data-label="Year" style="font-weight: 500; color: var(--text-light);">2022</td>
+                            <td data-label="Title & Publication">
+                                <strong
+                                    style="font-size: 1.1rem; display: block; margin-bottom: 0.5rem; color: var(--text-dark);">Historical
+                                    Preservation in the Digital Age</strong>
+                                <span style="font-size: 0.9rem; color: var(--text-light);">Digital Humanities
+                                    Network</span>
+                            </td>
+                            <td data-label="Type"><span class="glass-pill"
+                                    style="font-size: 0.75rem; background: rgba(251, 207, 232, 0.5);">Journal</span>
+                            </td>
+                            <td data-label="Action">
+                                <a href="#" class="btn btn-glass" style="padding: 0.5rem 1rem; font-size: 0.9rem;">View
+                                    / Cite <i class="fa-solid fa-external-link-alt"
+                                        style="margin-left: 5px; font-size: 0.8rem;"></i></a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="glass-card reveal" style="margin-top: 3rem; text-align: center; padding: 3rem;">
+                <i class="fa-solid fa-quote-left"
+                    style="font-size: 2rem; color: var(--accent-pink); opacity: 0.5; margin-bottom: 1rem;"></i>
+                <p
+                    style="font-size: 1.2rem; font-family: var(--font-heading); font-weight: 500; max-width: 700px; margin: 0 auto; color: var(--text-dark);">
+                    "Research is to see what everybody else has seen, and to think what nobody else has thought."
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content reveal">
+                <div class="footer-col" style="flex: 2; min-width: 250px;">
+                    <h3 class="logo" style="margin-bottom: 1rem;">Scholar.</h3>
+                    <p style="max-width: 300px;">A premium academic portfolio showcasing international research and
+                        experiences.</p>
+                </div>
+                <div class="footer-col" style="flex: 1; min-width: 150px;">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="blogs.html">Blogs</a></li>
+                        <li><a href="academics.html">Academics</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col" style="flex: 1; min-width: 150px;">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="#">Google Scholar</a></li>
+                        <li><a href="#">ICOMOS</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">ORCID</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Academic Portfolio. All rights reserved. | Built with elegance.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
