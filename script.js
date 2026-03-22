@@ -62,19 +62,6 @@ document.addEventListener('DOMContentLoaded', () => {
             item.classList.add('active');
         }
     });
-
-    // 4. Fetch and Render Google Scholar Papers
-    const fetchResearchPapers = async () => {
-        const homeContainer = document.getElementById('home-research-container');
-        const academicsContainer = document.getElementById('academics-research-container');
-        
-        if (!homeContainer && !academicsContainer) return;
-        
-        try {
-            const response = await fetch('/api/getPapers');
-            if (!response.ok) throw new Error('Network response was not ok');
-            
-            const papers = await response.json();
             
             // Sort by citations descending
             papers.sort((a, b) => (b.citations || 0) - (a.citations || 0));
