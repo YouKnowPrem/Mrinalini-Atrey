@@ -124,27 +124,10 @@
                 <h2>Featured Research</h2>
                 <p>A glimpse into my latest published academic works.</p>
             </div>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-                <div class="glass-card reveal">
-                    <span class="glass-pill" style="margin-bottom: 1rem; font-size: 0.75rem;">2026 | Peer
-                        Reviewed</span>
-                    <h3 style="margin-bottom: 1rem; font-size: 1.25rem;">Global Perspectives on Modern Academic
-                        Frameworks</h3>
-                    <p style="font-size: 0.95rem; margin-bottom: 1.5rem;">An analysis of international standards and
-                        their application in local contexts.</p>
-                    <a href="academics.html"
-                        style="color: var(--accent-pink); font-weight: 500; position: relative; z-index: 2;">Read Paper
-                        <i class="fa-solid fa-arrow-right" style="margin-left: 5px;"></i></a>
-                </div>
-                <div class="glass-card reveal" style="transition-delay: 0.1s;">
-                    <span class="glass-pill" style="margin-bottom: 1rem; font-size: 0.75rem;">2025 | Journal
-                        Publication</span>
-                    <h3 style="margin-bottom: 1rem; font-size: 1.25rem;">Developing Cross-Cultural Strategies</h3>
-                    <p style="font-size: 0.95rem; margin-bottom: 1.5rem;">Examining the role of cultural competency in
-                        international relations.</p>
-                    <a href="academics.html"
-                        style="color: var(--accent-pink); font-weight: 500; position: relative; z-index: 2;">Read Paper
-                        <i class="fa-solid fa-arrow-right" style="margin-left: 5px;"></i></a>
+            <div id="home-research-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <div style="text-align: center; grid-column: 1 / -1; padding: 2rem;" class="loading-state">
+                    <i class="fa-solid fa-spinner fa-spin" style="font-size: 2rem; color: var(--accent-lavender); margin-bottom: 1rem;"></i>
+                    <p>Fetching top cited papers from Google Scholar...</p>
                 </div>
             </div>
             <div style="text-align: center; margin-top: 3rem;" class="reveal">
