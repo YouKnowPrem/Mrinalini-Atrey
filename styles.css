@@ -503,3 +503,18 @@ footer {
 .hero-img-container:hover .profile-img {
   transform: scale(1.05);
 }
+
+.about-divider {
+  border-left: 1px solid var(--glass-border);
+  padding-left: 2rem;
+}
+
+@media (max-width: 768px) {
+  .about-divider {
+    border-left: none;
+    border-top: 1px solid var(--glass-border);
+    padding-left: 0;
+    padding-top: 2rem;
+    margin-top: 2rem;
+  }
+}
