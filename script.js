@@ -72,39 +72,5 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // 4. GSAP Background Doodle Animations
-    if (typeof gsap !== 'undefined') {
-        gsap.to('.doodle-1', {
-            y: -50,
-            x: 40,
-            rotation: 15,
-            scale: 1.05,
-            duration: 15,
-            ease: "sine.inOut",
-            yoyo: true,
-            repeat: -1
-        });
-        
-        gsap.to('.doodle-2', {
-            y: 50,
-            x: -40,
-            rotation: -10,
-            scale: 0.95,
-            duration: 18,
-            ease: "sine.inOut",
-            yoyo: true,
-            repeat: -1
-        });
-        
-        gsap.to('.doodle-3', {
-            y: -30,
-            x: 50,
-            rotation: 20,
-            scale: 1.1,
-            duration: 12,
-            ease: "sine.inOut",
-            yoyo: true,
-            repeat: -1
-        });
-    }
+
 });
