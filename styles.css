@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
 
 :root {
   /* Pastel Palette */
@@ -64,7 +63,9 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   opacity: 0.6;
-  filter: blur(2px); /* Very slight base blur; distinct shapes that get heavily blurred by the glass cards */
+  /* Very slight base blur; distinct shapes that get heavily blurred by the glass cards */
+  filter: blur(2px);
+  will-change: transform;
   /* Animation handled by GSAP for optimal smoothness */
   pointer-events: none;
 }
@@ -471,6 +472,10 @@ footer {
 
   .section {
     padding: 4rem 0;
+  }
+
+  .doodle {
+    display: none !important;
   }
 }
 
