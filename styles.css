@@ -6,9 +6,9 @@
   --pastel-lavender: #f3e8ff;
   --pastel-lavender-pure: #e9d5ff;
   --text-dark: #1e293b;
-  --text-light: #64748b;
-  --accent-pink: #ec4899;
-  --accent-lavender: #a855f7;
+  --text-light: #334155;
+  --accent-pink: #d946ef;
+  --accent-lavender: #7e22ce;
 
   /* Glassmorphism Tokens */
   --glass-bg: rgba(255, 255, 255, 0.4);
@@ -523,13 +523,11 @@ footer {
 @keyframes pulseGlow {
   0% {
     opacity: 0.4;
-    filter: blur(20px);
     transform: scale(0.98);
   }
 
   100% {
     opacity: 0.8;
-    filter: blur(25px);
     transform: scale(1.02);
   }
 }
@@ -604,7 +602,7 @@ footer {
 
 @keyframes pulse-letters {
   0% { transform: scale(0.95); opacity: 0.8; }
-  100% { transform: scale(1.05); opacity: 1; filter: drop-shadow(0 0 15px rgba(236, 72, 153, 0.4)); }
+  100% { transform: scale(1.05); opacity: 1; }
 }
 
 @keyframes pulse-text {
