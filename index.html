@@ -11,7 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"></noscript>
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
@@ -48,7 +49,7 @@
         style="margin-top: var(--nav-height); min-height: 80vh; display: flex; align-items: center;">
         <div class="container"
             style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; align-items: center;">
-            <div class="hero-content reveal">
+            <div class="hero-content">
                 <span class="glass-pill" style="margin-bottom: 1.5rem;">Dr. Mrinalini Atrey</span>
                 <h1>Historian, Heritage Professional, <br><span
                         style="background: linear-gradient(135deg, var(--accent-pink), var(--accent-lavender)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">Folklorist, Jammu region</span></h1>
@@ -59,7 +60,7 @@
                     <a href="#about" class="btn btn-glass">About Me</a>
                 </div>
             </div>
-            <div class="hero-image reveal" style="position: relative; max-width: 400px; margin: 0 auto; width: 100%;">
+            <div class="hero-image" style="position: relative; max-width: 400px; margin: 0 auto; width: 100%;">
                 <!-- Subtle glowing animated background effect -->
                 <div
                     style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; background: linear-gradient(135deg, var(--accent-pink), var(--accent-lavender)); border-radius: 24px; z-index: -2; animation: pulseGlow 4s infinite alternate;">
