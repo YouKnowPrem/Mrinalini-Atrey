@@ -1,14 +1,10 @@
-// 0. Preloader Logic
 window.addEventListener('load', () => {
     const preloader = document.getElementById('preloader');
     if (preloader) {
-        // Delay fade slightly for aesthetics, then remove from view
+        preloader.classList.add('fade-out');
         setTimeout(() => {
-            preloader.classList.add('fade-out');
-            setTimeout(() => {
-                preloader.style.display = 'none';
-            }, 800); // Matches the CSS transition duration
-        }, 300);
+            preloader.style.display = 'none';
+        }, 800);
     }
 });
 
