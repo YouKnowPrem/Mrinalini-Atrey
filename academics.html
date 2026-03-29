@@ -12,7 +12,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"></noscript>
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
@@ -163,16 +164,16 @@
     <!-- Page Header -->
     <header class="section" style="margin-top: var(--nav-height); padding-bottom: 2rem;">
         <div class="container text-center" style="text-align: center;">
-            <span class="glass-pill reveal" style="margin-bottom: 1rem;">Research Library</span>
-            <h1 class="reveal" style="transition-delay: 0.1s;">Academic <span
+            <span class="glass-pill" style="margin-bottom: 1rem;">Research Library</span>
+            <h1 style="transition-delay: 0.1s;">Academic <span
                     style="background: linear-gradient(135deg, var(--accent-pink), var(--accent-lavender)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">Profiles
                     & Archive</span></h1>
-            <p class="reveal" style="transition-delay: 0.2s; max-width: 600px; margin: 1rem auto 0;">A comprehensive
+            <p style="transition-delay: 0.2s; max-width: 600px; margin: 1rem auto 0;">A comprehensive
                 repository of my published works, research papers, and institutional links. Detailed bibliography
                 focusing on gendered foodways, oral traditions, and intangible cultural heritage in the Jammu region.
             </p>
 
-            <div class="profile-links reveal" style="transition-delay: 0.3s;">
+            <div class="profile-links" style="transition-delay: 0.3s;">
                 <a href="https://scholar.google.co.in/citations?user=HCrTFzMAAAAJ&hl=en" target="_blank"
                     rel="noopener noreferrer" class="profile-link" title="Google Scholar">
                     <i class="fa-brands fa-google" style="color: #ea4335;"></i> Scholar
