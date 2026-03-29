@@ -9,8 +9,14 @@
     <meta name="description"
         content="Read my latest insights, articles, and thoughts on international research, academic frameworks, and global policy.">
     <meta name="keywords" content="academic blog, international research, global policy, academia, research insights">
+    <!-- Fonts & Icons Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     <link rel="stylesheet" href="styles.css">
     <style>
         .blog-list {
@@ -29,6 +35,12 @@
         @media (min-width: 768px) {
             .blog-item {
                 grid-template-columns: 300px 1fr;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .blog-item > div:first-child {
+                height: 120px !important;
             }
         }
     </style>
@@ -234,8 +246,8 @@
         </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="script.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script defer src="script.js"></script>
 </body>
 
 </html>
