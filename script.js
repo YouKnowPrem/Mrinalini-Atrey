@@ -1,13 +1,3 @@
-window.addEventListener('load', () => {
-    const preloader = document.getElementById('preloader');
-    if (preloader) {
-        preloader.classList.add('fade-out');
-        setTimeout(() => {
-            preloader.style.display = 'none';
-        }, 800);
-    }
-});
-
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Mobile Navigation Toggle
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
