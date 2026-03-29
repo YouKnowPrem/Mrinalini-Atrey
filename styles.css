@@ -464,47 +464,18 @@ footer {
     grid-template-columns: 1fr !important;
   }
 
-  /* Disable reveal animations and effects for simpler mobile experience */
+  /* Smooth reveal animations for mobile */
   .reveal {
-    opacity: 1 !important;
-    transform: none !important;
-    transition: none !important;
-  }
-  .reveal.active {
-    transform: none !important;
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1) !important;
   }
   
-  .glass-card {
-    transform: none !important;
-    transition: none !important;
-  }
-  .glass-card:hover {
-    transform: none !important;
-  }
-  .glass-card::before {
-    display: none !important;
-  }
-  
-  .hero-img-container img {
-    transition: none !important;
-  }
-  .hero-img-container:hover .profile-img {
-    transform: none !important;
-  }
-  
-  .hero-image > div {
-    animation: none !important;
-  }
-
-  /* Disable heavy paints for Core Web Vitals on Mobile */
+  /* Retain glassmorphism on mobile for premium feel */
   .glass-card, 
   .glass-panel, 
   .glass-pill, 
   nav.scrolled {
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
-    background: rgba(255, 255, 255, 0.95) !important;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05) !important;
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
   }
 }
 
