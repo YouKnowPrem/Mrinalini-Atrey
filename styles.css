@@ -428,8 +428,9 @@ footer {
   }
 
   .hero-img-container {
-    max-width: 300px;
+    max-width: 220px;
     margin: 0 auto;
+    border-radius: 16px !important;
   }
 
   .footer-content {
@@ -439,7 +440,28 @@ footer {
   }
 
   .section {
-    padding: 4rem 0;
+    padding: 2.5rem 0 !important;
+  }
+
+  /* Smaller Typography, Elements & Aesthetics for Mobile */
+  h1 { font-size: clamp(1.8rem, 7vw, 2.2rem) !important; }
+  h2 { font-size: clamp(1.5rem, 5vw, 1.8rem) !important; }
+  h3 { font-size: 1.15rem !important; }
+  p { font-size: 0.9rem !important; margin-bottom: 0.85rem !important; line-height: 1.5 !important; }
+  
+  .container { padding: 0 1.25rem !important; }
+  
+  .btn { padding: 0.75rem 1.5rem !important; font-size: 0.95rem !important; }
+  .glass-pill { padding: 0.35rem 0.8rem !important; font-size: 0.75rem !important; margin-bottom: 0.75rem !important; }
+  
+  .glass-card { padding: 1.25rem !important; border-radius: 16px !important; gap: 1rem !important; }
+  
+  /* Override inline grid styling for mobile to prevent overflow and reduce gaps */
+  [style*="display: grid"] {
+    gap: 1.25rem !important;
+  }
+  [style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
   }
 
   /* Disable reveal animations and effects for simpler mobile experience */
@@ -526,7 +548,7 @@ footer {
     border-left: none;
     border-top: 1px solid var(--glass-border);
     padding-left: 0;
-    padding-top: 2rem;
-    margin-top: 2rem;
+    padding-top: 1rem;
+    margin-top: 1rem;
   }
 }
