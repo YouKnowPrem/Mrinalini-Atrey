@@ -1,3 +1,17 @@
+// 0. Preloader Logic
+window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+        // Delay fade slightly for aesthetics, then remove from view
+        setTimeout(() => {
+            preloader.classList.add('fade-out');
+            setTimeout(() => {
+                preloader.style.display = 'none';
+            }, 800); // Matches the CSS transition duration
+        }, 300);
+    }
+});
+
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Mobile Navigation Toggle
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
