@@ -13,7 +13,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"></noscript>
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
@@ -74,11 +75,11 @@
     <!-- Page Header -->
     <header class="section" style="margin-top: var(--nav-height); padding-bottom: 2rem;">
         <div class="container text-center" style="text-align: center;">
-            <span class="glass-pill reveal" style="margin-bottom: 1rem;">Insights & Articles</span>
-            <h1 class="reveal" style="transition-delay: 0.1s;">Academic <span
+            <span class="glass-pill" style="margin-bottom: 1rem;">Insights & Articles</span>
+            <h1 style="transition-delay: 0.1s;">Academic <span
                     style="background: linear-gradient(135deg, var(--accent-pink), var(--accent-lavender)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">Blogs</span>
             </h1>
-            <p class="reveal" style="transition-delay: 0.2s; max-width: 600px; margin: 1rem auto 0;">Explore my
+            <p style="transition-delay: 0.2s; max-width: 600px; margin: 1rem auto 0;">Explore my
                 collection of thoughts, analyses, and reflections on international academic trends and my experiences
                 across various global positions.</p>
         </div>
