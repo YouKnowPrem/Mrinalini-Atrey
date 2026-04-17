@@ -53,7 +53,10 @@ body {
   z-index: -1;
   overflow: hidden;
   pointer-events: none;
-  background: linear-gradient(135deg, #fbcfe8, #e9d5ff, #ffedd5);
+  background: linear-gradient(135deg, rgba(251, 207, 232, 0.8), rgba(233, 213, 255, 0.8), rgba(255, 237, 213, 0.8)), url('bahufort.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 /* Typography elements */
