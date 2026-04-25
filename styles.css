@@ -684,23 +684,27 @@ footer {
 }
 
 .footer-social-icon {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+    gap: 0.6rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 30px;
     background: var(--glass-bg);
     border: 1px solid var(--glass-border);
     color: var(--text-dark);
-    font-size: 1.2rem;
+    font-size: 0.95rem;
+    font-weight: 500;
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     text-decoration: none;
 }
 
+.footer-social-icon i {
+    font-size: 1.1rem;
+}
+
 .footer-social-icon:hover {
-    transform: translateY(-5px) scale(1.15);
+    transform: translateY(-5px);
     background: linear-gradient(135deg, var(--accent-pink), var(--accent-lavender));
     color: white;
     box-shadow: 0 10px 20px rgba(217, 70, 239, 0.4);
