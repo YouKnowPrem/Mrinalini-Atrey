@@ -343,46 +343,107 @@
         </div>
     </main>
 
+    
     <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content reveal">
-                <div class="footer-col" style="flex: 2; min-width: 250px;">
-                    <h3 class="logo" style="margin-bottom: 1rem;">Dr. Mrinalini Atrey</h3>
-                    <p style="max-width: 300px;">Dr Mrinalini Atrey - A heritage scholar bridging fieldwork with global
-                        advocacy.</p>
+    <footer style="margin-top: 4rem; padding: 4rem 0 2rem; position: relative;">
+        <!-- Animated Background Element for the whole footer area -->
+        <div style="position: absolute; bottom: 0; left: 0; width: 100%; height: 50%; background: linear-gradient(to top, rgba(233,213,255,0.4), transparent); z-index: -1; pointer-events: none;"></div>
+        
+        <div class="container" style="padding-bottom: 2rem; position: relative;">
+            <!-- Glowing Floating Orbs behind the Glass Card -->
+            <div class="footer-glow-orb" style="top: -10%; left: -5%; width: 350px; height: 350px; background: linear-gradient(135deg, var(--pastel-pink-pure), var(--accent-pink)); opacity: 0.5;"></div>
+            <div class="footer-glow-orb" style="bottom: -10%; right: -5%; width: 400px; height: 400px; background: linear-gradient(135deg, var(--pastel-lavender-pure), var(--accent-lavender)); opacity: 0.5; animation-delay: -4s;"></div>
+            <div class="footer-glow-orb" style="top: 30%; left: 50%; width: 250px; height: 250px; background: linear-gradient(135deg, var(--pastel-pink-pure), var(--pastel-lavender-pure)); opacity: 0.5; animation-delay: -2s; transform: translateX(-50%);"></div>
+
+            <div class="glass-card reveal footer-modern-card" style="padding: 3.5rem; position: relative; border-radius: 30px; z-index: 1;">
+                
+                <div class="footer-content" style="position: relative; z-index: 1; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 4rem; margin-bottom: 0;">
+                    
+                    <!-- Col 1: Brand & Newsletter -->
+                    <div class="footer-brand" style="display: flex; flex-direction: column; gap: 1.5rem;">
+                        <div>
+                            <h3 style="margin-bottom: 0.5rem; font-size: 2rem; font-family: var(--font-heading); font-weight: 700; background: linear-gradient(135deg, var(--accent-pink), var(--accent-lavender)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; display: inline-block;">Dr. Mrinalini Atrey</h3>
+                            <p style="font-size: 0.95rem; line-height: 1.6; color: var(--text-light); margin-top: 0.5rem;">Exploring memory, craft, and regional resilience through the lens of heritage and global advocacy.</p>
+                        </div>
+                        
+                        <div style="background: rgba(255,255,255,0.4); padding: 1.5rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.6);">
+                            <h4 style="font-size: 1rem; margin-bottom: 1rem; color: var(--text-dark); display: flex; align-items: center; gap: 0.5rem;"><i class="fa-solid fa-envelope-open-text" style="color: var(--accent-lavender);"></i> Stay Updated</h4>
+                            <div style="display: flex; gap: 0.5rem;">
+                                <input type="email" placeholder="Your email address" class="footer-newsletter-input">
+                                <button class="btn btn-primary" style="padding: 0.8rem; border-radius: 50%; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;" aria-label="Subscribe">
+                                    <i class="fa-solid fa-paper-plane"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Col 2: Quick Links & Contact -->
+                    <div class="footer-nav" style="display: flex; flex-direction: column; gap: 2rem;">
+                        <div>
+                            <h4 style="margin-bottom: 1.2rem; font-size: 1.1rem; color: var(--text-dark); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; font-size: 0.85rem;">Explore</h4>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                                <a href="index.html" class="footer-nav-link"><i class="fa-solid fa-house" style="margin-right: 8px; color: var(--accent-lavender); font-size: 0.9em;"></i> Home</a>
+                                <a href="index.html#about" class="footer-nav-link"><i class="fa-solid fa-user" style="margin-right: 8px; color: var(--accent-pink); font-size: 0.9em;"></i> About</a>
+                                <a href="blogs.html" class="footer-nav-link"><i class="fa-solid fa-pen-nib" style="margin-right: 8px; color: var(--accent-lavender); font-size: 0.9em;"></i> Blogs</a>
+                                <a href="academics.html" class="footer-nav-link"><i class="fa-solid fa-graduation-cap" style="margin-right: 8px; color: var(--accent-pink); font-size: 0.9em;"></i> Academics</a>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h4 style="margin-bottom: 1.2rem; font-size: 1.1rem; color: var(--text-dark); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; font-size: 0.85rem;">Contact</h4>
+                            <a href="mailto:atreymrinalini@gmail.com" style="display: inline-flex; align-items: center; gap: 0.8rem; color: var(--text-light); text-decoration: none; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateX(5px)'" onmouseout="this.style.transform='translateX(0)'">
+                                <div style="width: 35px; height: 35px; border-radius: 50%; background: var(--pastel-pink-pure); display: flex; align-items: center; justify-content: center; color: var(--accent-pink);">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <span style="font-weight: 500;">atreymrinalini@gmail.com</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Col 3: Social & Profiles -->
+                    <div class="footer-socials">
+                        <h4 style="margin-bottom: 1.2rem; font-size: 1.1rem; color: var(--text-dark); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; font-size: 0.85rem;">Connect & Profiles</h4>
+                        <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
+                            <!-- Improved Tooltip approach for icons -->
+                            <a href="https://scholar.google.co.in/citations?user=HCrTFzMAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="footer-social-icon" title="Google Scholar">
+                                <i class="fa-solid fa-book-open"></i>
+                            </a>
+                            <a href="https://jammuuniversity.academia.edu/MrinaliniAtrey/CurriculumVitae" target="_blank" rel="noopener noreferrer" class="footer-social-icon" title="Academia.edu">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/mrinalini-a-61875510/" target="_blank" rel="noopener noreferrer" class="footer-social-icon" title="LinkedIn">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://www.youtube.com/@Pastandpages" target="_blank" rel="noopener noreferrer" class="footer-social-icon" title="YouTube">
+                                <i class="fa-brands fa-youtube"></i>
+                            </a>
+                            <a href="https://www.icomosindia.com/nsc.html" target="_blank" rel="noopener noreferrer" class="footer-social-icon" title="ICOMOS">
+                                <i class="fa-solid fa-landmark"></i>
+                            </a>
+                            <a href="https://www.criticalheritagestudies.org/membership-directory#!biz/id/563ee34c4f952ee5392f9f95" target="_blank" rel="noopener noreferrer" class="footer-social-icon" title="ACHS">
+                                <i class="fa-solid fa-users"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="footer-col" style="flex: 1; min-width: 150px;">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="index.html#about">About</a></li>
-                        <li><a href="blogs.html">Blogs</a></li>
-                        <li><a href="academics.html">Academics</a></li>
-                    </ul>
+                
+                <!-- Bottom Divider -->
+                <div style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.6); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; position: relative; z-index: 1;">
+                    <p style="margin: 0; font-size: 0.9rem; color: var(--text-light); font-weight: 500;">&copy; 2026 Dr. Mrinalini Atrey. All rights reserved.</p>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; background: rgba(255,255,255,0.5); padding: 0.4rem 0.8rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.7);">
+                            <span style="font-size: 0.75rem; color: var(--text-light); text-transform: uppercase; font-weight: 600; letter-spacing: 0.5px;">Hosted with</span>
+                            <a href="https://vercel.com" target="_blank" rel="noopener noreferrer" style="color: var(--text-dark); display: flex; align-items: center; transition: opacity 0.3s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">
+                                <svg height="12" viewBox="0 0 76 65" fill="var(--text-dark)" xmlns="http://www.w3.org/2000/svg"><path d="M37.5274 0L75.0548 65H0L37.5274 0Z"/></svg>
+                            </a>
+                            <span style="color: var(--glass-border);">|</span>
+                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" style="color: var(--text-dark); display: flex; align-items: center; transition: opacity 0.3s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">
+                                <i class="fa-brands fa-github" style="font-size: 1.1rem;"></i>
+                            </a>
+                        </div>
+                        <span style="font-size: 0.85rem; color: var(--text-light);">By <a href="https://prem-singh.vercel.app" style="color: var(--accent-pink); font-weight: 600; text-decoration: none; position: relative;" class="footer-nav-link">Prem</a></span>
+                    </div>
                 </div>
-                <div class="footer-col" style="flex: 1; min-width: 150px;">
-                    <h4>Connect & Profiles</h4>
-                    <ul>
-                        <li><a href="https://scholar.google.co.in/citations?user=HCrTFzMAAAAJ&hl=en" target="_blank"
-                                rel="noopener noreferrer">Google Scholar</a></li>
-                        <li><a href="https://jammuuniversity.academia.edu/MrinaliniAtrey/CurriculumVitae"
-                                target="_blank" rel="noopener noreferrer">Academia.edu</a></li>
-                        <li><a href="https://www.linkedin.com/in/mrinalini-a-61875510/" target="_blank"
-                                rel="noopener noreferrer">LinkedIn</a></li>
-                        <li><a href="https://www.youtube.com/@Pastandpages" target="_blank"
-                                rel="noopener noreferrer">YouTube</a></li>
-                        <li><a href="https://www.icomosindia.com/nsc.html" target="_blank"
-                                rel="noopener noreferrer">ICOMOS India</a></li>
-                        <li><a href="https://www.criticalheritagestudies.org/membership-directory#!biz/id/563ee34c4f952ee5392f9f95"
-                                target="_blank" rel="noopener noreferrer">ACHS Directory</a></li>
-                        <li><a href="mailto:atreymrinalini@gmail.com">Email Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 All rights reserved | Made with 💖 | <a href="https://prem-singh.vercel.app">By Prem</a>
-                </p>
             </div>
         </div>
     </footer>
