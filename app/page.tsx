@@ -38,7 +38,7 @@ export default function Home() {
                   WebkitTextFillColor: "transparent",
                 }}
               >
-                Folklorist of Jammu Region
+                Folklorist Jammu Region
               </span>
             </h1>
             <p
