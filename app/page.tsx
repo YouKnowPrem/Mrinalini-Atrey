@@ -50,7 +50,7 @@ export default function Home() {
               }}
             >
               Secretary-General, ICICH | National Scientific Co-Counselor,
-              ICOMOS-India <br /> Assistant Professor, University of Jammu
+              ICOMOS-India <br /> Teaches History at The Law School, University of Jammu.
             </p>
             <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
               <Link href="/academics" className="btn btn-primary">
