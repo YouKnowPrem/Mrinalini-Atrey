@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Academics & Research</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="View my complete academic archive, including peer-reviewed papers, journals, and international study links.">
+    <!-- Fonts & Icons Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .archive-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 1rem;
+        }
+
+        .archive-table th {
+            text-align: left;
+            padding: 1rem;
+            color: var(--text-light);
+            font-weight: 500;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .archive-table td {
+            background: rgba(255, 255, 255, 0.3);
+            padding: 1.5rem 1rem;
+            backdrop-filter: blur(8px);
+        }
+
+        .archive-table tr td:first-child {
+            border-top-left-radius: 12px;
+            border-bottom-left-radius: 12px;
+        }
+
+        .archive-table tr td:last-child {
+            border-top-right-radius: 12px;
+            border-bottom-right-radius: 12px;
+        }
+
+        .archive-table tr {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .archive-table tr:hover td {
+            background: rgba(255, 255, 255, 0.6);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        @media (max-width: 768px) {
+            .archive-table thead {
+                display: none;
+            }
+
+            .archive-table,
+            .archive-table tbody,
+            .archive-table tr,
+            .archive-table td {
+                display: block;
+                width: 100%;
+            }
+
+            .archive-table tr {
+                margin-bottom: 1rem;
+                border-radius: 12px;
+                overflow: hidden;
+                border: 1px solid var(--glass-border);
+            }
+
+            .archive-table td {
+                text-align: left;
+                padding: 1rem 0.8rem;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                gap: 0.25rem;
+            }
+
+            .archive-table td::before {
+                content: attr(data-label);
+                position: static;
+                width: auto;
+                font-weight: 600;
+                text-align: left;
+                color: var(--accent-lavender);
+                font-size: 0.85rem;
+            }
+        }
+
+        .profile-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .profile-link {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            background: var(--glass-bg);
+            padding: 1rem 1.5rem;
+            border-radius: 50px;
+            border: 1px solid var(--glass-border);
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .profile-link:hover {
+            background: rgba(255, 255, 255, 0.8);
+            transform: translateY(-3px);
+            box-shadow: var(--glass-shadow-hover);
+        }
+
+        @media (max-width: 768px) {
+            .profile-link {
+                padding: 0.75rem 1rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Background Animated Pink Doodles -->
+    <div class="bg-orbs">
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Dr. Mrinalini Atrey</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="academics.html" class="active">Academics</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="section" style="margin-top: var(--nav-height); padding-bottom: 2rem;">
+        <div class="container text-center" style="text-align: center;">
+            <span class="glass-pill" style="margin-bottom: 1rem;">Research Library</span>
+            <h1 style="transition-delay: 0.1s;">Academic <span
+                    style="background: linear-gradient(135deg, var(--accent-pink), var(--accent-lavender)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">Profiles
+                    & Archive</span></h1>
+            <p style="transition-delay: 0.2s; max-width: 600px; margin: 1rem auto 0;">A comprehensive
+                repository of my published works, research papers, and institutional links. Detailed bibliography
+                focusing on gendered foodways, oral traditions, and intangible cultural heritage in the Jammu region.
+            </p>
+
+            <div class="profile-links" style="transition-delay: 0.3s;">
+                <a href="https://scholar.google.co.in/citations?user=HCrTFzMAAAAJ&hl=en" target="_blank"
+                    rel="noopener noreferrer" class="profile-link" title="Google Scholar">
+                    <i class="fa-brands fa-google" style="color: #ea4335;"></i> Scholar
+                </a>
+                <a href="https://jammuuniversity.academia.edu/MrinaliniAtrey/CurriculumVitae" target="_blank"
+                    rel="noopener noreferrer" class="profile-link" title="Academia.edu">
+                    <i class="fa-solid fa-graduation-cap" style="color: var(--accent-lavender);"></i> Academia
+                </a>
+                <a href="https://www.linkedin.com/in/mrinalini-a-61875510/" target="_blank"
+                    rel="noopener noreferrer" class="profile-link" title="LinkedIn">
+                    <i class="fa-brands fa-linkedin" style="color: #0077b5;"></i> LinkedIn
+                </a>
+                <a href="https://www.youtube.com/@Pastandpages" target="_blank"
+                    rel="noopener noreferrer" class="profile-link" title="YouTube">
+                    <i class="fa-brands fa-youtube" style="color: #ff0000;"></i> YouTube
+                </a>
+                <a href="https://www.icomosindia.com/nsc.html" target="_blank" rel="noopener noreferrer"
+                    class="profile-link" title="ICOMOS India NSC">
+                    <i class="fa-solid fa-building-columns" style="color: var(--accent-pink);"></i> ICOMOS
+                </a>
+                <a href="https://www.criticalheritagestudies.org/membership-directory#!biz/id/563ee34c4f952ee5392f9f95"
+                    target="_blank" rel="noopener noreferrer" class="profile-link" title="ACHS Directory">
+                    <i class="fa-solid fa-users" style="color: var(--text-dark);"></i> ACHS
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Archive -->
+    <main class="section" style="padding-top: 2rem;">
+        <div class="container">
+            <div class="glass-card reveal">
+                <h2
+                    style="margin-bottom: 2rem; font-size: 1.8rem; border-bottom: 1px solid var(--glass-border); padding-bottom: 1rem;">
+                    Published Works</h2>
+
+                <table class="archive-table">
+                    <thead>
+                        <tr>
+                            <th>Year</th>
+                            <th>Title & Publication</th>
+                            <th>Type</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- JK Monitor Article -->
+                        <tr>
+                            <td data-label="Year" style="font-weight: 500; color: var(--text-light);">N/A</td>
+                            <td data-label="Title & Publication">
+                                <strong style="font-size: 1.1rem; display: block; margin-bottom: 0.5rem; color: var(--text-dark);">Preserving Jammu's Rich Heritage: Dr. Mrinalini Atrey's Research Sheds Light on Intangible Cultural Legacy</strong>
+                                <span style="font-size: 0.9rem; color: var(--text-light);">JK Monitor</span>
+                            </td>
+                            <td data-label="Type"><span class="glass-pill" style="font-size: 0.75rem; background: rgba(251, 207, 232, 0.5);">Article</span></td>
+                            <td data-label="Action"><a href="https://jkmonitor.org/archive-2010-2024/categories/preserving-jammus-rich-heritage-dr-mrinalini-atreys-research-sheds-light-on-intangible-cultural-legacy.html" target="_blank" rel="noopener noreferrer" class="btn btn-glass" style="padding: 0.5rem 1rem; font-size: 0.9rem;">View <i class="fa-solid fa-external-link-alt" style="margin-left: 5px; font-size: 0.8rem;"></i></a></td>
+                        </tr>
+                        <!-- Paper 1 -->
+                        <tr>
+                            <td data-label="Year" style="font-weight: 500; color: var(--text-light);">2025</td>
+                            <td data-label="Title & Publication">
+                                <strong style="font-size: 1.1rem; display: block; margin-bottom: 0.5rem; color: var(--text-dark);">Seasonal migration practices of the Gujjar and Bakarwal communities</strong>
+                                <span style="font-size: 0.9rem; color: var(--text-light);">Intangible cultural heritage safeguarding & climate action</span>
+                            </td>
+                            <td data-label="Type"><span class="glass-pill" style="font-size: 0.75rem; background: rgba(224, 242, 254, 0.5);">Book Chapter</span></td>
+                            <td data-label="Action"><a href="https://scholar.google.co.in/citations?view_op=view_citation&hl=en&user=HCrTFzMAAAAJ&citation_for_view=HCrTFzMAAAAJ:IjCSPb-OGe4C" class="btn btn-glass" style="padding: 0.5rem 1rem; font-size: 0.9rem;">View <i class="fa-solid fa-external-link-alt" style="margin-left: 5px; font-size: 0.8rem;"></i></a></td>
+                        </tr>
+                        <!-- Paper 2 -->
+                        <tr>
+                            <td data-label="Year" style="font-weight: 500; color: var(--text-light);">2023</td>
+                            <td data-label="Title & Publication">
+                                <strong style="font-size: 1.1rem; display: block; margin-bottom: 0.5rem; color: var(--text-dark);">How Now, My Good Folklorist, I have Some Questions for You...</strong>
+                                <span style="font-size: 0.9rem; color: var(--text-light);">ISFNR Newsletter</span>
+                            </td>
+                            <td data-label="Type"><span class="glass-pill" style="font-size: 0.75rem; background: rgba(251, 207, 232, 0.5);">Newsletter Article</span></td>
+                            <td data-label="Action"><a href="https://scholar.google.co.in/citations?view_op=view_citation&hl=en&user=HCrTFzMAAAAJ&citation_for_view=HCrTFzMAAAAJ:Y0pCki6q_DkC" class="btn btn-glass" style="padding: 0.5rem 1rem; font-size: 0.9rem;">View <i class="fa-solid fa-external-link-alt" style="margin-left: 5px; font-size: 0.8rem;"></i></a></td>
+                        </tr>
+                        <!-- Paper 3 -->
+                        <tr>
+                            <td data-label="Year" style="font-weight: 500; color: var(--text-light);">2021</td>
+                            <td data-label="Title & Publication">
+                                <strong style="font-size: 1.1rem; display: block; margin-bottom: 0.5rem; color: var(--text-dark);">Documenting the Folk Deities of Jammu Region</strong>
+                                <span style="font-size: 0.9rem; color: var(--text-light);">Understanding Culture and Society in India</span>
+                            </td>
+                            <td data-label="Type"><span class="glass-pill" style="font-size: 0.75rem; background: rgba(224, 242, 254, 0.5);">Book Chapter</span></td>
+                            <td data-label="Action"><a href="https://scholar.google.co.in/citations?view_op=view_citation&hl=en&user=HCrTFzMAAAAJ&citation_for_view=HCrTFzMAAAAJ:u-x6o8ySG0sC" class="btn btn-glass" style="padding: 0.5rem 1rem; font-size: 0.9rem;">View <i class="fa-solid fa-external-link-alt" style="margin-left: 5px; font-size: 0.8rem;"></i></a></td>
+                        </tr>
+                        <!-- Paper 4 -->
+                        <tr>
+                            <td data-label="Year" style="font-weight: 500; color: var(--text-light);">2021</td>
+                            <td data-label="Title & Publication">
+                                <strong style="font-size: 1.1rem; display: block; margin-bottom: 0.5rem; color: var(--text-dark);">Intangible Cultural Heritage and Women Narratives: A Case Study of Jammu Region, India</strong>
+                                <span style="font-size: 0.9rem; color: var(--text-light);">Patrimonio</span>
+                            </td>
+                            <td data-label="Type"><span class="glass-pill" style="font-size: 0.75rem; background: rgba(233, 213, 255, 0.5);">Journal</span></td>
+                            <td data-label="Action"><a href="https://scholar.google.co.in/citations?view_op=view_citation&hl=en&user=HCrTFzMAAAAJ&citation_for_view=HCrTFzMAAAAJ:2osOgNQ5qMEC" class="btn btn-glass" style="padding: 0.5rem 1rem; font-size: 0.9rem;">View <i class="fa-solid fa-external-link-alt" style="margin-left: 5px; font-size: 0.8rem;"></i></a></td>
+                        </tr>
+                        <!-- Paper 5 -->
+                        <tr>
+                            <td data-label="Year" style="font-weight: 500; color: var(--text-light);">2021</td>
+                            <td data-label="Title & Publication">
+                                <strong style="font-size: 1.1rem; display: block; margin-bottom: 0.5rem; color: var(--text-dark);">The Dancing Poet: Rabindranath Tagore and Choreographies of Participation</strong>
+                                <span style="font-size: 0.9rem; color: var(--text-light);">Asian Ethnology</span>
+                            </td>
+                            <td data-label="Type"><span class="glass-pill" style="font-size: 0.75rem; background: rgba(233, 213, 255, 0.5);">Journal</span></td>
+                            <td data-label="Action"><a href="https://scholar.google.co.in/citations?view_op=view_citation&hl=en&user=HCrTFzMAAAAJ&citation_for_view=HCrTFzMAAAAJ:9yKSN-GCB0IC" class="btn btn-glass" style="padding: 0.5rem 1rem; font-size: 0.9rem;">View <i class="fa-solid fa-external-link-alt" style="margin-left: 5px; font-size: 0.8rem;"></i></a></td>
+                        </tr>
+                        <!-- Paper 6 -->
+                        <tr>
+                            <td data-label="Year" style="font-weight: 500; color: var(--text-light);">2021</td>
+                            <td data-label="Title & Publication">
+                                <strong style="font-size: 1.1rem; display: block; margin-bottom: 0.5rem; color: var(--text-dark);">Patrimonio Cultural Inmaterial y Narrativas de Mujeres</strong>
+                                <span style="font-size: 0.9rem; color: var(--text-light);">PATRIMONIO: Economía Cultural y Educación para la Paz</span>
+                            </td>
+                            <td data-label="Type"><span class="glass-pill" style="font-size: 0.75rem; background: rgba(233, 213, 255, 0.5);">Journal</span></td>
+                            <td data-label="Action"><a href="https://scholar.google.co.in/citations?view_op=view_citation&hl=en&user=HCrTFzMAAAAJ&citation_for_view=HCrTFzMAAAAJ:d1gkVwhDpl0C" class="btn btn-glass" style="padding: 0.5rem 1rem; font-size: 0.9rem;">View <i class="fa-solid fa-external-link-alt" style="margin-left: 5px; font-size: 0.8rem;"></i></a></td>
+                        </tr>
+                        <!-- Paper 7 -->
+                        <tr>
+                            <td data-label="Year" style="font-weight: 500; color: var(--text-light);">2016</td>
+                            <td data-label="Title & Publication">
+                                <strong style="font-size: 1.1rem; display: block; margin-bottom: 0.5rem; color: var(--text-dark);">Genre–text–interpretation</strong>
+                                <span style="font-size: 0.9rem; color: var(--text-light);">Genre–Text–Interpretation</span>
+                            </td>
+                            <td data-label="Type"><span class="glass-pill" style="font-size: 0.75rem; background: rgba(233, 213, 255, 0.5);">Book/Edited Volume</span></td>
+                            <td data-label="Action"><a href="https://scholar.google.co.in/citations?view_op=view_citation&hl=en&user=HCrTFzMAAAAJ&citation_for_view=HCrTFzMAAAAJ:zYLM7Y9cAGgC" class="btn btn-glass" style="padding: 0.5rem 1rem; font-size: 0.9rem;">View <i class="fa-solid fa-external-link-alt" style="margin-left: 5px; font-size: 0.8rem;"></i></a></td>
+                        </tr>
+                        <!-- Paper 8 -->
+                        <tr>
+                            <td data-label="Year" style="font-weight: 500; color: var(--text-light);">2016</td>
+                            <td data-label="Title & Publication">
+                                <strong style="font-size: 1.1rem; display: block; margin-bottom: 0.5rem; color: var(--text-dark);">Major Generic Forms of Dogri lok gathas</strong>
+                                <span style="font-size: 0.9rem; color: var(--text-light);">Genre–Text–Interpretation</span>
+                            </td>
+                            <td data-label="Type"><span class="glass-pill" style="font-size: 0.75rem; background: rgba(224, 242, 254, 0.5);">Book Chapter</span></td>
+                            <td data-label="Action"><a href="https://scholar.google.co.in/citations?view_op=view_citation&hl=en&user=HCrTFzMAAAAJ&citation_for_view=HCrTFzMAAAAJ:qjMakFHDy7sC" class="btn btn-glass" style="padding: 0.5rem 1rem; font-size: 0.9rem;">View <i class="fa-solid fa-external-link-alt" style="margin-left: 5px; font-size: 0.8rem;"></i></a></td>
+                        </tr>
+                        <!-- Paper 9 -->
+                        <tr>
+                            <td data-label="Year" style="font-weight: 500; color: var(--text-light);">2016</td>
+                            <td data-label="Title & Publication">
+                                <strong style="font-size: 1.1rem; display: block; margin-bottom: 0.5rem; color: var(--text-dark);">Manifestations of Humour in Serbian Folklore Material: The Example of Šala</strong>
+                                <span style="font-size: 0.9rem; color: var(--text-light);">Genre–Text–Interpretation</span>
+                            </td>
+                            <td data-label="Type"><span class="glass-pill" style="font-size: 0.75rem; background: rgba(224, 242, 254, 0.5);">Book Chapter</span></td>
+                            <td data-label="Action"><a href="https://scholar.google.co.in/citations?view_op=view_citation&hl=en&user=HCrTFzMAAAAJ&citation_for_view=HCrTFzMAAAAJ:Tyk-4Ss8FVUC" class="btn btn-glass" style="padding: 0.5rem 1rem; font-size: 0.9rem;">View <i class="fa-solid fa-external-link-alt" style="margin-left: 5px; font-size: 0.8rem;"></i></a></td>
+                        </tr>
+                        <!-- Paper 10 -->
+                        <tr>
+                            <td data-label="Year" style="font-weight: 500; color: var(--text-light);">2012</td>
+                            <td data-label="Title & Publication">
+                                <strong style="font-size: 1.1rem; display: block; margin-bottom: 0.5rem; color: var(--text-dark);">Naga Deity Cult in Jammu Region</strong>
+                                <span style="font-size: 0.9rem; color: var(--text-light);">Shodhak: A Journal of Historical Research</span>
+                            </td>
+                            <td data-label="Type"><span class="glass-pill" style="font-size: 0.75rem; background: rgba(233, 213, 255, 0.5);">Journal</span></td>
+                            <td data-label="Action"><a href="https://scholar.google.co.in/citations?view_op=view_citation&hl=en&user=HCrTFzMAAAAJ&citation_for_view=HCrTFzMAAAAJ:UeHWp8X0CEIC" class="btn btn-glass" style="padding: 0.5rem 1rem; font-size: 0.9rem;">View <i class="fa-solid fa-external-link-alt" style="margin-left: 5px; font-size: 0.8rem;"></i></a></td>
+                        </tr>
+                        <!-- Paper 11 -->
+                        <tr>
+                            <td data-label="Year" style="font-weight: 500; color: var(--text-light);">2008</td>
+                            <td data-label="Title & Publication">
+                                <strong style="font-size: 1.1rem; display: block; margin-bottom: 0.5rem; color: var(--text-dark);">Deity, cult, rituals & oral traditions in Jammu</strong>
+                                <span style="font-size: 0.9rem; color: var(--text-light);">Saksham Books International</span>
+                            </td>
+                            <td data-label="Type"><span class="glass-pill" style="font-size: 0.75rem; background: rgba(233, 213, 255, 0.5);">Book</span></td>
+                            <td data-label="Action"><a href="https://scholar.google.co.in/citations?view_op=view_citation&hl=en&user=HCrTFzMAAAAJ&citation_for_view=HCrTFzMAAAAJ:u5HHmVD_uO8C" class="btn btn-glass" style="padding: 0.5rem 1rem; font-size: 0.9rem;">View <i class="fa-solid fa-external-link-alt" style="margin-left: 5px; font-size: 0.8rem;"></i></a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="glass-card reveal" style="margin-top: 3rem; text-align: center; padding: 3rem;">
+                <i class="fa-solid fa-quote-left"
+                    style="font-size: 2rem; color: var(--accent-pink); opacity: 0.5; margin-bottom: 1rem;"></i>
+                <p
+                    style="font-size: 1.2rem; font-family: var(--font-heading); font-weight: 500; max-width: 700px; margin: 0 auto; color: var(--text-dark);">
+                    "Research is to see what everybody else has seen, and to think what nobody else has thought."
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content reveal">
+                <div class="footer-col" style="flex: 2; min-width: 250px;">
+                    <h3 class="logo" style="margin-bottom: 1rem;">Dr. Mrinalini Atrey</h3>
+                    <p style="max-width: 300px;">Dr Mrinalini Atrey - A heritage scholar bridging fieldwork with global
+                        advocacy.</p>
+                </div>
+                <div class="footer-col" style="flex: 1; min-width: 150px;">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="blogs.html">Blogs</a></li>
+                        <li><a href="academics.html">Academics</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col" style="flex: 1; min-width: 150px;">
+                    <h4>Connect & Profiles</h4>
+                    <ul>
+                        <li><a href="https://scholar.google.co.in/citations?user=HCrTFzMAAAAJ&hl=en" target="_blank"
+                                rel="noopener noreferrer">Google Scholar</a></li>
+                        <li><a href="https://jammuuniversity.academia.edu/MrinaliniAtrey/CurriculumVitae"
+                                target="_blank" rel="noopener noreferrer">Academia.edu</a></li>
+                        <li><a href="https://www.linkedin.com/in/mrinalini-a-61875510/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                        <li><a href="https://www.youtube.com/@Pastandpages" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+                        <li><a href="https://www.icomosindia.com/nsc.html" target="_blank"
+                                rel="noopener noreferrer">ICOMOS India</a></li>
+                        <li><a href="https://www.criticalheritagestudies.org/membership-directory#!biz/id/563ee34c4f952ee5392f9f95"
+                                target="_blank" rel="noopener noreferrer">ACHS Directory</a></li>
+                        <li><a href="mailto:atreymrinalini@gmail.com">Email Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 All rights reserved | Made with 💖 | <a href="https://prem-singh.vercel.app">By Prem</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script defer src="script.js"></script>
+</body>
+
+</html>
