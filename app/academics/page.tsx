@@ -67,7 +67,7 @@ export default function Academics() {
               <tbody>
                 {/* JK Monitor Article */}
                 <tr>
-                  <td data-label="Year" style={{ fontWeight: 500, color: "var(--text-light)" }}>N/A</td>
+                  <td data-label="Year" style={{ fontWeight: 500, color: "var(--text-light)" }}>2023</td>
                   <td data-label="Title & Publication">
                     <strong style={{ fontSize: "1.1rem", display: "block", marginBottom: "0.5rem", color: "var(--text-dark)" }}>
                       Preserving Jammu's Rich Heritage: Dr. Mrinalini Atrey's Research Sheds Light on Intangible Cultural Legacy
