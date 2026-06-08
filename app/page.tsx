@@ -1,7 +1,54 @@
 import Link from "next/link";
 import Image from "next/image";
+import { client } from "@/sanity/lib/client";
 
-export default function Home() {
+export default async function Home() {
+  let latestPosts: any[] = [];
+  let isSanityConfigured = false;
+
+  const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID;
+  if (projectId && projectId !== "placeholder") {
+    isSanityConfigured = true;
+    try {
+      const query = `*[_type == "post"] | order(date desc)[0...3]{
+        title,
+        "slug": slug.current,
+        excerpt,
+        icon,
+        accentColor
+      }`;
+      latestPosts = await client.fetch(query);
+    } catch (err) {
+      console.error("Failed to fetch latest posts from Sanity on home page:", err);
+    }
+  }
+
+  const fallbackPosts = [
+    {
+      title: "Ramban: Folklore, History & Ophiolatry",
+      slug: "ramban-book-review",
+      excerpt: "A landmark study of serpent worship in Jammu & Kashmir. This review explores Robin Koul's compelling documentation of Naga traditions and regional identity.",
+      icon: "fa-book-open",
+      accentColor: "lavender"
+    },
+    {
+      title: "Silent Destruction of Heritage in J&K",
+      slug: "silent-destruction-heritage",
+      excerpt: "Discover why the preservation of monuments in Jammu & Kashmir must become both a legal obligation and a cultural priority to prevent irreversible loss.",
+      icon: "fa-building-columns",
+      accentColor: "pink"
+    },
+    {
+      title: "A Quiet Rebellion in Dogri Theatre: Review of Chanchlo",
+      slug: "chanchlo-review",
+      excerpt: "Discover how a powerful 90-minute solo performance redefines regional theatre. Read the review of \"Chanchlo\", an adaptation that masterfully captures the margins of society and brings invisible struggles to the stage.",
+      icon: "fa-masks-theater",
+      accentColor: "lavender"
+    }
+  ];
+
+  const displayPosts = isSanityConfigured && latestPosts.length > 0 ? latestPosts : fallbackPosts;
+
   return (
     <>
       <header
@@ -111,11 +158,13 @@ export default function Home() {
                 border: "1px solid var(--glass-border)",
               }}
             >
-              {/* Note: In Next.js we use standard img for direct references from public folder to keep it simple, or next/image. */}
-              <img
+              <Image
                 src="/Mam (1).avif"
                 alt="Dr. Mrinalini Atrey"
                 className="Mrinalini-img"
+                width={400}
+                height={500}
+                priority
                 style={{
                   width: "100%",
                   height: "100%",
@@ -395,129 +444,51 @@ export default function Home() {
               gap: "2rem",
             }}
           >
-            {/* Blog Card 1 */}
-            <div className="glass-card reveal">
-              <div
-                style={{
-                  background: "rgba(255,255,255,0.4)",
-                  height: "150px",
-                  borderRadius: "12px",
-                  marginBottom: "1.5rem",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
-                <i
-                  className="fa-solid fa-landmark"
-                  style={{
-                    color: "var(--accent-pink)",
-                    fontSize: "2.5rem",
-                    opacity: 0.8,
-                  }}
-                ></i>
-              </div>
-              <h3 style={{ fontSize: "1.25rem", marginBottom: "0.5rem" }}>
-                Pakki Dhakki: A Heritage Lost in Silence
-              </h3>
-              <p style={{ fontSize: "0.9rem", marginBottom: "1rem" }}>
-                Explore the rich cultural heritage of Pakki Dhakki in Jammu. Discover how this historic slope reflects a need for conservation.
-              </p>
-              <Link
-                href="/blogs/pakki-dhakki"
-                style={{
-                  color: "var(--accent-lavender)",
-                  fontWeight: 500,
-                  fontSize: "0.9rem",
-                  position: "relative",
-                  zIndex: 2,
-                }}
-              >
-                Read More &rarr;
-              </Link>
-            </div>
-            {/* Blog Card 2 */}
-            <div className="glass-card reveal" style={{ transitionDelay: "0.1s" }}>
-              <div
-                style={{
-                  background: "rgba(255,255,255,0.4)",
-                  height: "150px",
-                  borderRadius: "12px",
-                  marginBottom: "1.5rem",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
-                <i
-                  className="fa-solid fa-users"
-                  style={{
-                    color: "var(--accent-lavender)",
-                    fontSize: "2.5rem",
-                    opacity: 0.8,
-                  }}
-                ></i>
-              </div>
-              <h3 style={{ fontSize: "1.25rem", marginBottom: "0.5rem" }}>
-                Appropriation and Awakening: Dogra Heritage
-              </h3>
-              <p style={{ fontSize: "0.9rem", marginBottom: "1rem" }}>
-                Discover why the Dogra community of Jammu must become conscious custodians of their heritage in a globalizing world.
-              </p>
-              <Link
-                href="/blogs/dogra-cultural-heritage"
-                style={{
-                  color: "var(--accent-lavender)",
-                  fontWeight: 500,
-                  fontSize: "0.9rem",
-                  position: "relative",
-                  zIndex: 2,
-                }}
-              >
-                Read More &rarr;
-              </Link>
-            </div>
-            {/* Blog Card 3 */}
-            <div className="glass-card reveal" style={{ transitionDelay: "0.2s" }}>
-              <div
-                style={{
-                  background: "rgba(255,255,255,0.4)",
-                  height: "150px",
-                  borderRadius: "12px",
-                  marginBottom: "1.5rem",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
-                <i
-                  className="fa-solid fa-vihara"
-                  style={{
-                    color: "var(--accent-pink)",
-                    fontSize: "2.5rem",
-                    opacity: 0.8,
-                  }}
-                ></i>
-              </div>
-              <h3 style={{ fontSize: "1.25rem", marginBottom: "0.5rem" }}>
-                Dhounthali’s Divine Threshold: Balram Ji Temple
-              </h3>
-              <p style={{ fontSize: "0.9rem", marginBottom: "1rem" }}>
-                Explore the spiritual and architectural significance of the Balram Ji Temple in Jammu and its restoration concerns.
-              </p>
-              <Link
-                href="/blogs/balram-ji-temple"
-                style={{
-                  color: "var(--accent-lavender)",
-                  fontWeight: 500,
-                  fontSize: "0.9rem",
-                  position: "relative",
-                  zIndex: 2,
-                }}
-              >
-                Read More &rarr;
-              </Link>
-            </div>
+            {displayPosts.map((post: any, idx: number) => {
+              const iconColor = post.accentColor === "lavender" ? "var(--accent-lavender)" : "var(--accent-pink)";
+              return (
+                <div key={post.slug || idx} className="glass-card reveal" style={{ transitionDelay: `${0.1 * (idx % 3)}s` }}>
+                  <div
+                    style={{
+                      background: "rgba(255,255,255,0.4)",
+                      height: "150px",
+                      borderRadius: "12px",
+                      marginBottom: "1.5rem",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
+                  >
+                    <i
+                      className={`fa-solid ${post.icon || 'fa-file-lines'}`}
+                      style={{
+                        color: iconColor,
+                        fontSize: "2.5rem",
+                        opacity: 0.8,
+                      }}
+                    ></i>
+                  </div>
+                  <h3 style={{ fontSize: "1.25rem", marginBottom: "0.5rem" }}>
+                    {post.title}
+                  </h3>
+                  <p style={{ fontSize: "0.9rem", marginBottom: "1rem" }}>
+                    {post.excerpt}
+                  </p>
+                  <Link
+                    href={`/blogs/${post.slug}`}
+                    style={{
+                      color: "var(--accent-lavender)",
+                      fontWeight: 500,
+                      fontSize: "0.9rem",
+                      position: "relative",
+                      zIndex: 2,
+                    }}
+                  >
+                    Read More &rarr;
+                  </Link>
+                </div>
+              );
+            })}
           </div>
           <div style={{ textAlign: "center", marginTop: "3rem" }} className="reveal">
             <Link href="/blogs" className="btn btn-glass">

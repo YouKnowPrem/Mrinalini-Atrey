@@ -508,6 +508,11 @@ footer {
     backdrop-filter: var(--glass-blur);
     -webkit-backdrop-filter: var(--glass-blur);
   }
+
+  /* Disable fixed background attachment on mobile to eliminate repaint scroll lag */
+  .bg-orbs {
+    background-attachment: scroll !important;
+  }
 }
 
 @media (max-width: 480px) {
