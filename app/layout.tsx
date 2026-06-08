@@ -3,7 +3,7 @@ import { Inter, Outfit } from "next/font/google";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ScrollReveal from "../components/ScrollReveal";
-import { GoogleAnalytics } from "@next/third-parties/google";
+import DelayedAnalytics from "@/components/DelayedAnalytics";
 
 const inter = Inter({ 
   subsets: ["latin"], 
@@ -33,6 +33,7 @@ export default function RootLayout({
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          precedence="default"
         />
       </head>
       <body className={`${inter.variable} ${outfit.variable}`}>
@@ -41,7 +42,7 @@ export default function RootLayout({
         <ScrollReveal />
         {children}
         <Footer />
-        <GoogleAnalytics gaId="G-0PTY2P47K2" />
+        <DelayedAnalytics />
       </body>
     </html>
   );
