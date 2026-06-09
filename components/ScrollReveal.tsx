@@ -9,23 +9,31 @@ export default function ScrollReveal() {
   useEffect(() => {
     const reveals = document.querySelectorAll(".reveal");
 
-    const revealOnScroll = () => {
-      const windowHeight = window.innerHeight;
-      const elementVisible = 100;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("active");
+            // Stop observing once revealed to optimize performance
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        root: null,
+        rootMargin: "0px 0px -100px 0px",
+        threshold: 0,
+      }
+    );
 
-      reveals.forEach((reveal) => {
-        const elementTop = reveal.getBoundingClientRect().top;
-        if (elementTop < windowHeight - elementVisible) {
-          reveal.classList.add("active");
-        }
-      });
+    reveals.forEach((reveal) => {
+      observer.observe(reveal);
+    });
+
+    return () => {
+      observer.disconnect();
     };
-
-    window.addEventListener("scroll", revealOnScroll);
-    revealOnScroll(); // Trigger once on mount
-
-    return () => window.removeEventListener("scroll", revealOnScroll);
-  }, [pathname]); // Re-run when route changes
+  }, [pathname]);
 
   return null;
 }
