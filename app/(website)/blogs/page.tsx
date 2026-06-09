@@ -140,28 +140,21 @@ export default async function Blogs() {
 
               return (
                 <article key={post.slug || idx} className="glass-card blog-item reveal" style={{ transitionDelay: `${0.1 * (idx % 3)}s` }}>
-                  <div
-                    style={{
-                      background: "rgba(255,255,255,0.4)",
-                      borderRadius: "12px",
-                      height: "200px",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                    }}
-                  >
-                    <i className={`fa-solid ${post.icon || 'fa-file-lines'}`} style={{ fontSize: "4rem", color: iconColor, opacity: 0.7 }}></i>
+                  <div className="blog-item-image">
+                    <i className={`fa-solid ${post.icon || 'fa-file-lines'}`} style={{ fontSize: "2.5rem", color: iconColor, opacity: 0.8 }}></i>
                   </div>
-                  <div>
-                    <div style={{ display: "flex", gap: "1rem", alignItems: "center", marginBottom: "1rem" }}>
-                      <span className="glass-pill" style={{ fontSize: "0.75rem" }}>{post.category}</span>
-                      <span style={{ fontSize: "0.85rem", color: "var(--text-light)" }}>{formattedDate}</span>
+                  <div className="blog-item-content">
+                    <div className="blog-item-meta">
+                      <span className="glass-pill" style={{ fontSize: "0.7rem", padding: "0.3rem 0.6rem" }}>{post.category}</span>
+                      <span style={{ fontSize: "0.8rem", color: "var(--text-light)" }}>{formattedDate}</span>
                     </div>
-                    <h2 style={{ fontSize: "1.8rem", marginBottom: "1rem" }}>{post.title}</h2>
-                    <p style={{ marginBottom: "1.5rem" }}>{post.excerpt}</p>
-                    <Link href={`/blogs/${post.slug}`} className="btn btn-primary" style={{ padding: "0.7rem 1.5rem", fontSize: "1rem" }}>
-                      Read Full Article
-                    </Link>
+                    <h3 className="blog-item-title">{post.title}</h3>
+                    <p className="blog-item-excerpt">{post.excerpt}</p>
+                    <div className="blog-item-action">
+                      <Link href={`/blogs/${post.slug}`} className="btn btn-primary" style={{ width: "100%", padding: "0.6rem 1.2rem", fontSize: "0.95rem" }}>
+                        Read Article
+                      </Link>
+                    </div>
                   </div>
                 </article>
               );
