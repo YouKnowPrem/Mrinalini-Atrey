@@ -5,17 +5,18 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import ScrollReveal from "../../components/ScrollReveal";
 import DelayedAnalytics from "@/components/DelayedAnalytics";
+import FontAwesomeLoader from "@/components/FontAwesomeLoader";
 
-const inter = Inter({ 
-  subsets: ["latin"], 
-  variable: "--font-body", 
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-body",
   weight: ["300", "400", "500", "600"],
   display: "swap"
 });
 
-const outfit = Outfit({ 
-  subsets: ["latin"], 
-  variable: "--font-heading", 
+const outfit = Outfit({
+  subsets: ["latin"],
+  variable: "--font-heading",
   weight: ["300", "400", "500", "600", "700"],
   display: "swap"
 });
@@ -32,18 +33,7 @@ export default function WebsiteLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <link 
-          id="fa-css"
-          rel="stylesheet" 
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
-          media="print" 
-        />
-        <script dangerouslySetInnerHTML={{ __html: `var link=document.getElementById('fa-css'); if(link.sheet) { link.media='all'; } else { link.onload=function(){ this.media='all'; } }` }} />
-        <noscript>
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-        </noscript>
-      </head>
+      <head />
       <body className={`${inter.variable} ${outfit.variable}`}>
         <div className="bg-orbs">
           <Image
@@ -51,6 +41,7 @@ export default function WebsiteLayout({
             alt="Background"
             fill
             priority
+            quality={55}
             sizes="100vw"
             style={{
               objectFit: "cover",
@@ -75,7 +66,9 @@ export default function WebsiteLayout({
         {children}
         <Footer />
         <DelayedAnalytics />
+        <FontAwesomeLoader />
       </body>
     </html>
   );
 }
+

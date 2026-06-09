@@ -156,6 +156,7 @@ export default async function Home() {
                 width={400}
                 height={500}
                 priority
+                quality={60}
                 sizes="(max-width: 768px) 220px, 400px"
                 style={{
                   width: "100%",
