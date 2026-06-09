@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { client } from "@/sanity/lib/client";
+import { urlForImage } from "@/sanity/lib/image";
 import "./blogs.css";
 
 export const revalidate = 3600; // Revalidate every hour
@@ -20,7 +21,8 @@ export default async function Blogs() {
         readTime,
         excerpt,
         icon,
-        accentColor
+        accentColor,
+        mainImage
       }`;
       posts = await client.fetch(query);
     } catch (err) {
@@ -131,7 +133,7 @@ export default async function Blogs() {
           <div className="blog-list">
             {displayPosts.map((post: any, idx: number) => {
               const iconColor = post.accentColor === "lavender" ? "var(--accent-lavender)" : "var(--accent-pink)";
-              
+
               const formattedDate = new Date(post.date).toLocaleDateString("en-US", {
                 month: "long",
                 year: "numeric",
@@ -141,7 +143,47 @@ export default async function Blogs() {
               return (
                 <article key={post.slug || idx} className="glass-card blog-item reveal" style={{ transitionDelay: `${0.1 * (idx % 3)}s` }}>
                   <div className="blog-item-image">
-                    <i className={`fa-solid ${post.icon || 'fa-file-lines'}`} style={{ fontSize: "2.5rem", color: iconColor, opacity: 0.8 }}></i>
+                    {post.mainImage?.asset ? (
+                      <img
+                        src={urlForImage(post.mainImage).url()}
+                        alt={post.title}
+                      />
+                    ) : (
+                      <div
+                        style={{
+                          position: "relative",
+                          width: "100%",
+                          height: "100%",
+                          backgroundImage: "url('/bahufort-optimized.webp')",
+                          backgroundSize: "cover",
+                          backgroundPosition: "center",
+                        }}
+                      >
+                        <div
+                          style={{
+                            position: "absolute",
+                            top: 0,
+                            left: 0,
+                            width: "100%",
+                            height: "100%",
+                            background: "rgba(255, 255, 255, 0.45)",
+                            backdropFilter: "blur(4px)",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                          }}
+                        >
+                          <i
+                            className={`fa-solid ${post.icon || 'fa-file-lines'}`}
+                            style={{
+                              fontSize: "2.5rem",
+                              color: iconColor,
+                              filter: "drop-shadow(0 2px 4px rgba(0,0,0,0.15))",
+                            }}
+                          ></i>
+                        </div>
+                      </div>
+                    )}
                   </div>
                   <div className="blog-item-content">
                     <div className="blog-item-meta">

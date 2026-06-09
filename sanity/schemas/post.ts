@@ -65,6 +65,14 @@ export default defineType({
       initialValue: 'pink',
       validation: Rule => Rule.required(),
     }),
+    defineField({
+      name: 'mainImage',
+      title: 'Main Image (Photo)',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    }),
     {
       name: 'content',
       title: 'Content',

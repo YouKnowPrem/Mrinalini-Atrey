@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { client } from "@/sanity/lib/client";
+import { urlForImage } from "@/sanity/lib/image";
 
 export default async function Home() {
   let latestPosts: any[] = [];
@@ -15,7 +16,8 @@ export default async function Home() {
         "slug": slug.current,
         excerpt,
         icon,
-        accentColor
+        accentColor,
+        mainImage
       }`;
       latestPosts = await client.fetch(query);
     } catch (err) {
@@ -450,23 +452,60 @@ export default async function Home() {
                 <div key={post.slug || idx} className="glass-card reveal" style={{ transitionDelay: `${0.1 * (idx % 3)}s` }}>
                   <div
                     style={{
-                      background: "rgba(255,255,255,0.4)",
                       height: "150px",
                       borderRadius: "12px",
                       marginBottom: "1.5rem",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
+                      overflow: "hidden",
+                      position: "relative",
                     }}
                   >
-                    <i
-                      className={`fa-solid ${post.icon || 'fa-file-lines'}`}
-                      style={{
-                        color: iconColor,
-                        fontSize: "2.5rem",
-                        opacity: 0.8,
-                      }}
-                    ></i>
+                    {post.mainImage?.asset ? (
+                      <img
+                        src={urlForImage(post.mainImage).url()}
+                        alt={post.title}
+                        style={{
+                          width: "100%",
+                          height: "100%",
+                          objectFit: "cover",
+                          transition: "transform 0.5s ease",
+                        }}
+                      />
+                    ) : (
+                      <div
+                        style={{
+                          position: "relative",
+                          width: "100%",
+                          height: "100%",
+                          backgroundImage: "url('/bahufort-optimized.webp')",
+                          backgroundSize: "cover",
+                          backgroundPosition: "center",
+                        }}
+                      >
+                        <div
+                          style={{
+                            position: "absolute",
+                            top: 0,
+                            left: 0,
+                            width: "100%",
+                            height: "100%",
+                            background: "rgba(255, 255, 255, 0.45)",
+                            backdropFilter: "blur(4px)",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                          }}
+                        >
+                          <i
+                            className={`fa-solid ${post.icon || 'fa-file-lines'}`}
+                            style={{
+                              color: iconColor,
+                              fontSize: "2.5rem",
+                              filter: "drop-shadow(0 2px 4px rgba(0,0,0,0.15))",
+                            }}
+                          ></i>
+                        </div>
+                      </div>
+                    )}
                   </div>
                   <h3 style={{ fontSize: "1.25rem", marginBottom: "0.5rem" }}>
                     {post.title}
