@@ -471,40 +471,16 @@ export default async function Home() {
                         }}
                       />
                     ) : (
-                      <div
+                      <img
+                        src="/bahufort-optimized.webp"
+                        alt={post.title}
                         style={{
-                          position: "relative",
                           width: "100%",
                           height: "100%",
-                          backgroundImage: "url('/bahufort-optimized.webp')",
-                          backgroundSize: "cover",
-                          backgroundPosition: "center",
+                          objectFit: "cover",
+                          transition: "transform 0.5s ease",
                         }}
-                      >
-                        <div
-                          style={{
-                            position: "absolute",
-                            top: 0,
-                            left: 0,
-                            width: "100%",
-                            height: "100%",
-                            background: "rgba(255, 255, 255, 0.45)",
-                            backdropFilter: "blur(4px)",
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                          }}
-                        >
-                          <i
-                            className={`fa-solid ${post.icon || 'fa-file-lines'}`}
-                            style={{
-                              color: iconColor,
-                              fontSize: "2.5rem",
-                              filter: "drop-shadow(0 2px 4px rgba(0,0,0,0.15))",
-                            }}
-                          ></i>
-                        </div>
-                      </div>
+                      />
                     )}
                   </div>
                   <h3 style={{ fontSize: "1.25rem", marginBottom: "0.5rem" }}>

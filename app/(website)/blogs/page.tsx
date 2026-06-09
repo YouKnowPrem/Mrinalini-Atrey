@@ -149,40 +149,10 @@ export default async function Blogs() {
                         alt={post.title}
                       />
                     ) : (
-                      <div
-                        style={{
-                          position: "relative",
-                          width: "100%",
-                          height: "100%",
-                          backgroundImage: "url('/bahufort-optimized.webp')",
-                          backgroundSize: "cover",
-                          backgroundPosition: "center",
-                        }}
-                      >
-                        <div
-                          style={{
-                            position: "absolute",
-                            top: 0,
-                            left: 0,
-                            width: "100%",
-                            height: "100%",
-                            background: "rgba(255, 255, 255, 0.45)",
-                            backdropFilter: "blur(4px)",
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                          }}
-                        >
-                          <i
-                            className={`fa-solid ${post.icon || 'fa-file-lines'}`}
-                            style={{
-                              fontSize: "2.5rem",
-                              color: iconColor,
-                              filter: "drop-shadow(0 2px 4px rgba(0,0,0,0.15))",
-                            }}
-                          ></i>
-                        </div>
-                      </div>
+                      <img
+                        src="/bahufort-optimized.webp"
+                        alt={post.title}
+                      />
                     )}
                   </div>
                   <div className="blog-item-content">
