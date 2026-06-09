@@ -33,7 +33,16 @@ export default function WebsiteLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" precedence="default" />
+        <link 
+          id="fa-css"
+          rel="stylesheet" 
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+          media="print" 
+        />
+        <script dangerouslySetInnerHTML={{ __html: `var link=document.getElementById('fa-css'); if(link.sheet) { link.media='all'; } else { link.onload=function(){ this.media='all'; } }` }} />
+        <noscript>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+        </noscript>
       </head>
       <body className={`${inter.variable} ${outfit.variable}`}>
         <div className="bg-orbs">

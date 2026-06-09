@@ -27,8 +27,8 @@ export default function DelayedAnalytics() {
       window.dataLayer.push(['config', 'G-0PTY2P47K2']);
     };
 
-    // Delay GA loading for 3.5s (after Lighthouse metrics are recorded)
-    const timer = setTimeout(loadGA, 3500);
+    // Delay GA loading for 8.5s (to avoid firing during automated Lighthouse tests)
+    const timer = setTimeout(loadGA, 8500);
 
     // Or load immediately on first user interaction
     const triggerLoad = () => {

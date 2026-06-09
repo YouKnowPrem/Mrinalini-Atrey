@@ -117,20 +117,7 @@ export default async function Home() {
             style={{ position: "relative", maxWidth: "400px", margin: "0 auto", width: "100%" }}
           >
             {/* Subtle glowing animated background effect */}
-            <div
-              style={{
-                position: "absolute",
-                width: "100%",
-                height: "100%",
-                top: 0,
-                left: 0,
-                background:
-                  "linear-gradient(135deg, var(--accent-pink), var(--accent-lavender))",
-                borderRadius: "24px",
-                zIndex: -2,
-                animation: "pulseGlow 4s infinite alternate",
-              }}
-            ></div>
+            <div className="pulse-glow-bg"></div>
 
             {/* Decorative glass background for the image */}
             <div
