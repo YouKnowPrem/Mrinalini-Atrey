@@ -3,6 +3,8 @@ import Image from "next/image";
 import { client } from "@/sanity/lib/client";
 import { urlForImage } from "@/sanity/lib/image";
 
+export const revalidate = 3600; // Revalidate every hour
+
 export default async function Home() {
   let latestPosts: any[] = [];
   let isSanityConfigured = false;
@@ -167,6 +169,7 @@ export default async function Home() {
                 width={400}
                 height={500}
                 priority
+                sizes="(max-width: 768px) 220px, 400px"
                 style={{
                   width: "100%",
                   height: "100%",
@@ -460,23 +463,23 @@ export default async function Home() {
                     }}
                   >
                     {post.mainImage?.asset ? (
-                      <img
+                      <Image
                         src={urlForImage(post.mainImage).url()}
                         alt={post.title}
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         style={{
-                          width: "100%",
-                          height: "100%",
                           objectFit: "cover",
                           transition: "transform 0.5s ease",
                         }}
                       />
                     ) : (
-                      <img
+                      <Image
                         src="/bahufort-optimized.webp"
                         alt={post.title}
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         style={{
-                          width: "100%",
-                          height: "100%",
                           objectFit: "cover",
                           transition: "transform 0.5s ease",
                         }}

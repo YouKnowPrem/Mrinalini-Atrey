@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { client } from "@/sanity/lib/client";
 import { urlForImage } from "@/sanity/lib/image";
 import "./blogs.css";
@@ -144,14 +145,24 @@ export default async function Blogs() {
                 <article key={post.slug || idx} className="glass-card blog-item reveal" style={{ transitionDelay: `${0.1 * (idx % 3)}s` }}>
                   <div className="blog-item-image">
                     {post.mainImage?.asset ? (
-                      <img
+                      <Image
                         src={urlForImage(post.mainImage).url()}
                         alt={post.title}
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        style={{
+                          objectFit: "cover",
+                        }}
                       />
                     ) : (
-                      <img
+                      <Image
                         src="/bahufort-optimized.webp"
                         alt={post.title}
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        style={{
+                          objectFit: "cover",
+                        }}
                       />
                     )}
                   </div>
