@@ -5,7 +5,6 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import ScrollReveal from "../../components/ScrollReveal";
 import DelayedAnalytics from "@/components/DelayedAnalytics";
-import FontAwesomeLoader from "../../components/FontAwesomeLoader";
 
 const inter = Inter({ 
   subsets: ["latin"], 
@@ -33,8 +32,10 @@ export default function WebsiteLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" precedence="default" />
+      </head>
       <body className={`${inter.variable} ${outfit.variable}`}>
-        <FontAwesomeLoader />
         <div className="bg-orbs">
           <Image
             src="/bahufort-optimized.webp"
