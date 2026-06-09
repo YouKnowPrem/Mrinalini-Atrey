@@ -1,8 +1,8 @@
-import "./globals.css";
+import "../globals.css";
 import { Inter, Outfit } from "next/font/google";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import ScrollReveal from "../components/ScrollReveal";
+import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
+import ScrollReveal from "../../components/ScrollReveal";
 import DelayedAnalytics from "@/components/DelayedAnalytics";
 
 const inter = Inter({ 
@@ -22,7 +22,7 @@ export const metadata = {
   description: "Academic portfolio, research, and insights.",
 };
 
-export default function RootLayout({
+export default function WebsiteLayout({
   children,
 }: {
   children: React.ReactNode;
