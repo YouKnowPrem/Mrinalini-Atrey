@@ -6,6 +6,7 @@ import Footer from "../../components/Footer";
 import ScrollReveal from "../../components/ScrollReveal";
 import DelayedAnalytics from "@/components/DelayedAnalytics";
 import FontAwesomeLoader from "@/components/FontAwesomeLoader";
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -67,6 +68,7 @@ export default function WebsiteLayout({
         <Footer />
         <DelayedAnalytics />
         <FontAwesomeLoader />
+        <Analytics />
       </body>
     </html>
   );
